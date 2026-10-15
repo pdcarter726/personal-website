@@ -1,41 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter Carter — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500..800&family=Caveat:wght@400..700&family=Geist:wght@400..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans">
-  <header>
-    <nav>
-      <h1>My Portfolio</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<body>
+<div class="root" style="--accent: #A5B4FC; background: #0B0D10; color: #ECEEF1; font-family: 'Geist', system-ui, sans-serif; overflow-x: hidden">
+
+  <header style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 24px clamp(20px, 5vw, 80px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+    <a href="index.html" style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.03em; text-decoration: none; color: #ECEEF1">Peter Carter<span style="color: var(--accent)">.</span></a>
+    <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
+      <a class="navlink" href="work.html">Work</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="resume.html">Resume</a>
+      <a class="navlink" href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short bio here.</p>
-  </section>
+  <section class="dots" style="position: relative">
+    <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(32px, 5vw, 72px) clamp(20px, 5vw, 80px) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 48px 64px">
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Project Title</h3>
-        <p>Short description of the project.</p>
+      <div style="flex: 1 1 560px; min-width: 0">
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(56px, 8.8vw, 128px); line-height: 0.95; letter-spacing: -0.045em">
+          <span class="rise" style="display: block; color: var(--accent)">Hey,</span>
+          <span class="rise2" style="display: block">I’m Peter<span style="color: var(--accent)">.</span></span>
+        </h1>
+        <p class="rise3" style="margin: 36px 0 0; max-width: 520px; font-size: 21px; line-height: 1.55; color: #B8C0CA; text-wrap: pretty">Welcome to my portfolio. Take a look around.</p>
+        <p class="rise3" style="margin: 16px 0 0; font-size: 24px; line-height: 1.4; color: #ECEEF1">I’m a <span class="roles">
+            <span class="rw" style="animation-delay: 0s">computer science senior</span>
+            <span class="rw" style="animation-delay: 3s">full-stack developer</span>
+            <span class="rw" style="animation-delay: 6s">Neurotech Club coder</span>
+            <span class="rw" style="animation-delay: 9s">recipe-app maker</span>
+            <span class="rw" style="animation-delay: 12s">problem solver</span>
+            <span class="rw" style="animation-delay: 15s">future teammate</span>
+          </span></p>
+        <div class="rise4" style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px">
+          <a class="btn btn-primary" href="work.html">
+            See what I’ve built
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="btn btn-ghost" href="contact.html">Say hi</a>
+        </div>
       </div>
+
+      <div class="rise3" style="flex: 0 1 380px; position: relative; padding: 0 22px 36px 0">
+        <div class="polaroid" style="rotate: 0deg; padding: 14px 14px 18px">
+          <div class="ph" style="height: 420px">Your portrait here</div>
+          <div style="font-size: 15px; color: #3A424C; margin-top: 14px; text-align: center">[caption]</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="fade" style="position: relative; margin-top: 40px; height: 150px; overflow: hidden; color: var(--accent)" aria-hidden="true">
+      <svg class="wave-b" viewBox="0 0 2400 120" preserveAspectRatio="none" style="position: absolute; left: 0; top: 18px; width: 200%; height: 120px; opacity: 0.22">
+        <path d="M0 60 L20 58 L40 63 L60 55 L80 66 L100 52 L120 68 L140 60 L170 59 L190 61 L210 40 L225 88 L240 20 L255 100 L270 44 L285 76 L300 58 L330 62 L350 56 L380 64 L400 57 L430 61 L450 59 L470 68 L490 50 L510 66 L530 54 L560 60 L600 62 L620 58 L650 64 L670 52 L690 70 L710 48 L730 72 L750 56 L780 60 L810 60 L830 66 L850 54 L880 61 L910 63 L930 36 L945 90 L960 28 L975 96 L990 40 L1005 80 L1020 52 L1040 62 L1070 58 L1100 64 L1130 56 L1160 61 L1200 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+        <path transform="translate(1200 0)" d="M0 60 L20 58 L40 63 L60 55 L80 66 L100 52 L120 68 L140 60 L170 59 L190 61 L210 40 L225 88 L240 20 L255 100 L270 44 L285 76 L300 58 L330 62 L350 56 L380 64 L400 57 L430 61 L450 59 L470 68 L490 50 L510 66 L530 54 L560 60 L600 62 L620 58 L650 64 L670 52 L690 70 L710 48 L730 72 L750 56 L780 60 L810 60 L830 66 L850 54 L880 61 L910 63 L930 36 L945 90 L960 28 L975 96 L990 40 L1005 80 L1020 52 L1040 62 L1070 58 L1100 64 L1130 56 L1160 61 L1200 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+      </svg>
+      <svg class="wave-a" viewBox="0 0 2400 120" preserveAspectRatio="none" style="position: absolute; left: 0; top: 12px; width: 200%; height: 120px">
+        <path d="M0 60 L20 58 L40 63 L60 55 L80 66 L100 52 L120 68 L140 60 L170 59 L190 61 L210 40 L225 88 L240 20 L255 100 L270 44 L285 76 L300 58 L330 62 L350 56 L380 64 L400 57 L430 61 L450 59 L470 68 L490 50 L510 66 L530 54 L560 60 L600 62 L620 58 L650 64 L670 52 L690 70 L710 48 L730 72 L750 56 L780 60 L810 60 L830 66 L850 54 L880 61 L910 63 L930 36 L945 90 L960 28 L975 96 L990 40 L1005 80 L1020 52 L1040 62 L1070 58 L1100 64 L1130 56 L1160 61 L1200 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+        <path transform="translate(1200 0)" d="M0 60 L20 58 L40 63 L60 55 L80 66 L100 52 L120 68 L140 60 L170 59 L190 61 L210 40 L225 88 L240 20 L255 100 L270 44 L285 76 L300 58 L330 62 L350 56 L380 64 L400 57 L430 61 L450 59 L470 68 L490 50 L510 66 L530 54 L560 60 L600 62 L620 58 L650 64 L670 52 L690 70 L710 48 L730 72 L750 56 L780 60 L810 60 L830 66 L850 54 L880 61 L910 63 L930 36 L945 90 L960 28 L975 96 L990 40 L1005 80 L1020 52 L1040 62 L1070 58 L1100 64 L1130 56 L1160 61 L1200 60" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+      </svg>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
+  <section aria-label="Tools" style="border-top: 1px solid #232830; border-bottom: 1px solid #232830; overflow: hidden; background: #0E1115">
+    <div class="track" style="display: flex; width: max-content; padding: 22px 0">
+      <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Java
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Spring Boot
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Hibernate
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          TypeScript
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          React
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Next.js
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          NestJS
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          PostgreSQL
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          MySQL
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Docker
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Python
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          PyTorch
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Java
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Spring Boot
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Hibernate
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          TypeScript
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          React
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Next.js
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          NestJS
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          PostgreSQL
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          MySQL
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Docker
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          Python
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      
+        <span style="display: inline-flex; align-items: center; gap: 32px; padding-right: 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; white-space: nowrap">
+          PyTorch
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+    </div>
   </section>
+
+  <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 80px) clamp(72px, 9vw, 128px)">
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; margin-bottom: 36px">
+      <h2 style="margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(36px, 4.5vw, 64px); line-height: 1; letter-spacing: -0.04em">Explore</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
+
+      <a class="card tile" href="work.html" style="padding: 32px; min-height: 280px; gap: 16px">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; color: var(--accent)">
+          01
+          <svg class="arr" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
+        </div>
+        <div style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.035em; line-height: 1; margin-top: auto">Work</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #B8C0CA">Four projects, each with its own page, code link and story.</p>
+      </a>
+
+      <a class="card tile" href="about.html" style="padding: 32px; min-height: 280px; gap: 16px">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; color: var(--accent)">
+          02
+          <svg class="arr" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
+        </div>
+        <div style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.035em; line-height: 1; margin-top: auto">About</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #B8C0CA">The person behind the commits, plus a few things that aren’t code.</p>
+      </a>
+
+      <a class="card tile" href="resume.html" style="padding: 32px; min-height: 280px; gap: 16px">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; color: var(--accent)">
+          03
+          <svg class="arr" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
+        </div>
+        <div style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.035em; line-height: 1; margin-top: auto">Resume</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #B8C0CA">The tidy, one-page version of all this.</p>
+      </a>
+
+      <a class="card tile" href="contact.html" style="padding: 32px; min-height: 280px; gap: 16px">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; color: var(--accent)">
+          04
+          <svg class="arr" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
+        </div>
+        <div style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.035em; line-height: 1; margin-top: auto">Contact</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #B8C0CA">Questions, coffee chats, code review. All welcome.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #232830">
+    <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 28px clamp(20px, 5vw, 80px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.06em; color: #9BA4AF">
+      <span>© 2026 Peter Carter</span>
+      <div class="quips" style="text-align: right">
+        <span class="quip" style="animation-delay: 0s">Built with too many hover effects</span>
+        <span class="quip" style="animation-delay: 4s">Works on my machine</span>
+        <span class="quip" style="animation-delay: 8s">git commit -m "final final v2"</span>
+        <span class="quip" style="animation-delay: 12s">Compiled with mild optimism</span>
+        <span class="quip" style="animation-delay: 16s">Tabs vs spaces: yes</span>
+        <span class="quip" style="animation-delay: 20s">Not a bug, a feature</span>
+        <span class="quip" style="animation-delay: 24s">Zero TODOs left (okay, three)</span>
+        <span class="quip" style="animation-delay: 28s">Centered a div on the first try</span>
+        <span class="quip" style="animation-delay: 32s">Powered by questionable caffeine</span>
+        <span class="quip" style="animation-delay: 36s">Ship it.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
