@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Peter Carter — Hilltop Home Games Site</title>
+<title>Peter Carter — EEG visualizer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500..800&family=Caveat:wght@400..700&family=Geist:wght@400..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
   <header style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 24px clamp(20px, 5vw, 80px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
     <a href="index.html" style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.03em; text-decoration: none; color: #ECEEF1">Peter Carter<span style="color: var(--accent)">.</span></a>
     <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
-      <a class="navlink" href="work.html" aria-current="page">Work</a>
       <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="work.html" aria-current="page">Work</a>
       <a class="navlink" href="resume.html">Resume</a>
       <a class="navlink" href="contact.html">Contact</a>
     </nav>
@@ -35,15 +35,11 @@
   <section class="dots" style="border-bottom: 1px solid #232830">
     <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(24px, 4vw, 48px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 80px)">
       <a class="back" href="work.html">← All work</a>
-      <div class="rise" style="margin-top: 24px; display: flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent)"></span>
-        Project 04 · Live
-      </div>
-      <h1 class="rise2" style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">A games site for <span style="color: var(--accent)">Hilltop Home.</span></h1>
+      <h1 class="rise2" style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">A custom <span style="color: var(--accent)">EEG visualizer.</span></h1>
       <div class="rise3" style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px">
-        <p style="margin: 0; max-width: 600px; font-size: 24px; line-height: 1.4; color: #ECEEF1; text-wrap: balance">Games and interaction for kids at a care facility, all playable from a single input device.</p>
+        <p style="margin: 0; max-width: 600px; font-size: 24px; line-height: 1.4; color: #ECEEF1; text-wrap: balance">A browser-based EEG viewer for the NeuroPawn Knight Board, with a simulator so you can try it without hardware.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
-          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-ghost" href="https://github.com/NCSU-Neurotech/eeg-visualizer" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
             View code
           </a>
@@ -53,14 +49,10 @@
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(40px, 5vw, 72px) clamp(20px, 5vw, 80px) 0">
-    <div style="border: 1px solid #2C333C; border-radius: 16px; overflow: hidden; background: #0E1115">
-      <div style="display: flex; align-items: center; gap: 8px; padding: 14px 18px; border-bottom: 1px solid #2C333C">
-        <span style="width: 10px; height: 10px; border-radius: 50%; background: #3A414B"></span>
-        <span style="width: 10px; height: 10px; border-radius: 50%; background: #3A414B"></span>
-        <span style="width: 10px; height: 10px; border-radius: 50%; background: #3A414B"></span>
-      </div>
-      <div class="ph" style="height: clamp(260px, 36vw, 520px)">Screenshot: one of the games</div>
-    </div>
+    <figure style="margin: 0">
+        <img src="images/eeg-visualizer/visualizer_home.png" alt="The EEG visualizer dashboard" style="display: block; width: 100%; height: auto; border: 1px solid #2C333C; border-radius: 16px">
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The dashboard running on the built-in simulator: live time series, spectrum with a 1/f fit, and band power across eight channels.</figcaption>
+      </figure>
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0; display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: flex-start">
@@ -68,31 +60,31 @@
     <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 40px">
       <div>
         <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">What it is</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A website deployed live at Hilltop Home, a care facility for children with developmental disabilities. It gives the kids games and ways to interact that work from one input device, so playing doesn’t depend on a keyboard and mouse.</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A replica of NeuroPawn’s EXG Visualizer with research-backed improvements. It connects straight to a Knight Board over USB, needs no installation, and includes a built-in simulator. There is also a Python desktop version that runs the same interface in a native window.</p>
       </div>
       <div>
-        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">The design constraint</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">When there’s only one input, every screen has to be playable with a single action. That changes how you think about menus, timing and feedback, and it makes you cut anything that isn’t essential.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">What it adds</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A single amplitude scale across channels, Welch spectra with a 1/f fit, documented filters, per-channel signal quality, event-locked averaging, motor-imagery ERD/ERS, a guided signal check, and playback of saved recordings. Data exports to EDF+ and CSV with EEG-BIDS style sidecars, so files open in MNE, EEGLAB and EDFbrowser. Each design choice in the README cites the paper behind it.</p>
       </div>
       <div>
         <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Behind the build</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A project from my time on the NCSU Neurotech Club’s software team. [ADD: which games you built, how it’s hosted, and how the staff and kids have taken to it.]</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A project for Neurotech at NC State, built by the software team I lead. The browser app is JavaScript, and the desktop version moves acquisition and analysis into Python. [ADD: which parts you built, and who uses it.]</p>
       </div>
     </div>
 
     <aside class="card" style="flex: 1 1 280px; padding: 28px; display: flex; flex-direction: column; gap: 22px">
       <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">Status</div>
-        <div style="font-size: 17px">Live at Hilltop Home</div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">Team</div>
+        <div style="font-size: 17px; line-height: 1.5">Neurotech at NC State</div>
       </div>
       <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">Team</div>
-        <div style="font-size: 17px">NCSU Neurotech Club</div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">Hardware</div>
+        <div style="font-size: 17px; line-height: 1.5">NeuroPawn Knight Board</div>
       </div>
       <div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 10px">Stack</div>
         <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <span class="chip">[ADD STACK]</span>
+          <span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">EEG</span>
         </div>
       </div>
     </aside>
@@ -101,16 +93,18 @@
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 20px">
-      <div class="ph" style="height: 300px; border-radius: 16px">Screenshot: game menu</div>
-      <div class="ph" style="height: 300px; border-radius: 16px">Photo: the setup in use</div>
+      <figure style="margin: 0; grid-column: 1 / -1">
+        <img src="images/eeg-visualizer/visualizer_ssvep.png" alt="The SSVEP page of the EEG visualizer" style="display: block; width: 100%; height: auto; border: 1px solid #2C333C; border-radius: 16px">
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The SSVEP page: flickering targets at set frequencies, with decoder, window and channel settings.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) clamp(72px, 9vw, 128px)">
-    <a class="card tile" href="work.html" style="padding: 36px 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px">
+    <a class="card tile" href="project-jaw-robot.html" style="padding: 36px 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px">
       <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">That’s all four</div>
-        <div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Back to all work</div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project</div>
+        <div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">A robot driven by jaw clenches</div>
       </div>
       <svg class="arr" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
     </a>

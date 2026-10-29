@@ -25,8 +25,8 @@
   <header style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 24px clamp(20px, 5vw, 80px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
     <a href="index.html" style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.03em; text-decoration: none; color: #ECEEF1">Peter Carter<span style="color: var(--accent)">.</span></a>
     <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
-      <a class="navlink" href="work.html" aria-current="page">Work</a>
       <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="work.html" aria-current="page">Work</a>
       <a class="navlink" href="resume.html">Resume</a>
       <a class="navlink" href="contact.html">Contact</a>
     </nav>
@@ -35,15 +35,11 @@
   <section class="dots" style="border-bottom: 1px solid #232830">
     <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(24px, 4vw, 48px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 80px)">
       <a class="back" href="work.html">← All work</a>
-      <div class="rise" style="margin-top: 24px; display: flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent)"></span>
-        Project 02 · In progress
-      </div>
-      <h1 class="rise2" style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">An interactive <span style="color: var(--accent)">periodic table.</span></h1>
+      <h1 class="rise2" style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">An interactive <span style="color: var(--accent)">periodic table.</span></h1>
       <div class="rise3" style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px">
         <p style="margin: 0; max-width: 600px; font-size: 24px; line-height: 1.4; color: #ECEEF1; text-wrap: balance">A senior design project for CollegeBoard, built so blind and low-vision students can use it too.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
-          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-ghost" href="https://github.com/pdcarter726/accessible-periodic-table" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
             View code
           </a>
@@ -53,7 +49,10 @@
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(40px, 5vw, 72px) clamp(20px, 5vw, 80px) 0">
-    <div class="ph" style="height: clamp(260px, 36vw, 520px); border-radius: 16px">Screenshot: the periodic table in the browser</div>
+    <figure style="margin: 0">
+        <img src="images/periodic-table/periodictable.png" alt="The interactive periodic table" style="display: block; width: 100%; height: auto; border: 1px solid #2C333C; border-radius: 16px">
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The interactive periodic table, with keyboard help, display settings, element search and a detail view for the selected element.</figcaption>
+      </figure>
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0; display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: flex-start">
@@ -106,16 +105,22 @@
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 20px">
-      <div class="ph" style="height: 300px; border-radius: 16px">Image: early sketch or wireframe</div>
-      <div class="ph" style="height: 300px; border-radius: 16px">Image: team or whiteboard photo</div>
+      <figure style="margin: 0">
+        <div class="ph" style="height: 300px; border-radius: 16px">Image: early sketch or wireframe</div>
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+      </figure>
+      <figure style="margin: 0">
+        <img src="images/periodic-table/periodictable_team_web.jpg" alt="The periodic table senior design team at dinner" style="display: block; width: 100%; height: 300px; object-fit: cover; object-position: center 35%; border: 1px solid #2C333C; border-radius: 16px">
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The senior design team.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) clamp(72px, 9vw, 128px)">
-    <a class="card tile" href="project-eeg.html" style="padding: 36px 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px">
+    <a class="card tile" href="project-car-prices.html" style="padding: 36px 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px">
       <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project · 03</div>
-        <div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Reading epilepsy states from EEG</div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project</div>
+        <div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Predicting used car prices</div>
       </div>
       <svg class="arr" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
     </a>
