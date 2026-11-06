@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Peter Carter — Used car price model</title>
+<title>Peter Carter — Used Car Price Prediction Model</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500..800&family=Caveat:wght@400..700&family=Geist:wght@400..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
   <section class="dots" style="border-bottom: 1px solid #232830">
     <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(24px, 4vw, 48px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 80px)">
       <a class="back" href="work.html">← All work</a>
-      <h1 class="rise2" style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">Predicting <span style="color: var(--accent)">used car prices.</span></h1>
+      <h1 class="rise2" style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">Used Car <span style="color: var(--accent)">Price Prediction Model.</span></h1>
       <div class="rise3" style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px">
         <p style="margin: 0; max-width: 600px; font-size: 24px; line-height: 1.4; color: #ECEEF1; text-wrap: balance">A machine learning model that predicts what a used car is worth.</p>
       </div>
@@ -54,22 +54,26 @@
     <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 40px">
       <div>
         <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">What it is</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A machine learning model that takes a used car’s details and predicts its price. It looks at things like mileage, engine horsepower and size, brand, model year and age, fuel type, transmission, and whether the car has had an accident.</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A machine learning model looks at the different features of a car (color, make, model, etc) and uses available pricing data to predict what a similar car should be worth. The model is trained on a Kaggle used car price dataset. </p>
       </div>
       <div>
         <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">How it works</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">The model is a CatBoost gradient-boosted regressor, which handles categorical features like brand and model directly. I added engineered features such as age and miles per year, and judged it on a held-out test set. [ADD: where the data came from, how you cleaned it, and which other models you compared.]</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">We used a CatBoost gradient boosted regressor for its native handling of categorical variables. Engineered features like miles per year were added and the model was tested on data withheld from the training set. </p>
       </div>
       <div>
-        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Results</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">Predictions track actual prices closely across a wide range, from a few thousand dollars to six figures, and most errors sit near zero. The misses are mostly rare, very expensive cars. [ADD: your headline accuracy number, such as error in dollars or R², and what you would improve.]</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Results and Next Steps</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">Predictions track prices fairly accurately. However, there is overfitting and a few outliers skew the data. The model misses on a few exotic car entries, with the most expensive being a Maserati priced at ~$3,000,000. We are going to experiment with other options for the model, such as XGBoost. We also plan to create a small interface surrounding this so a user can input details about their own car and recieve pricing information.  </p>
       </div>
     </div>
 
     <aside class="card" style="flex: 1 1 280px; padding: 28px; display: flex; flex-direction: column; gap: 22px">
       <div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">Status</div>
+        <div style="font-size: 17px; line-height: 1.5">In progress</div>
+      </div>
+      <div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">Type</div>
-        <div style="font-size: 17px; line-height: 1.5">[ADD: class, personal or club project]</div>
+        <div style="font-size: 17px; line-height: 1.5">Class</div>
       </div>
       <div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 10px">Stack</div>
@@ -85,23 +89,24 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 20px">
       <figure style="margin: 0">
         <div style="background: #fff; border: 1px solid #2C333C; border-radius: 16px; padding: clamp(12px, 2vw, 28px); box-sizing: border-box"><img src="images/car-price-prediction/feature_importance.png" alt="CatBoost feature importance" style="display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto"></div>
-        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Which features the CatBoost model leans on most: mileage, horsepower, brand and age lead.</figcaption>
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Feature importance</figcaption>
       </figure>
       <figure style="margin: 0">
         <div style="background: #fff; border: 1px solid #2C333C; border-radius: 16px; padding: clamp(12px, 2vw, 28px); box-sizing: border-box"><img src="images/car-price-prediction/residuals.png" alt="Distribution of prediction errors on the test set" style="display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto"></div>
-        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Prediction errors on the test set, clipped at ±$50k. Most land close to zero.</figcaption>
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Prediction errors on the test set, clipped at ±$50k.</figcaption>
       </figure>
     </div>
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) clamp(72px, 9vw, 128px)">
-    <a class="card tile" href="project-eeg-visualizer.html" style="padding: 36px 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px">
-      <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project</div>
-        <div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">A custom EEG visualizer</div>
-      </div>
-      <svg class="arr" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px">
+    <a class="card tile" href="project-periodic-table.html" style="flex: 1 1 380px; padding: 36px 40px; align-items: center; justify-content: flex-start; flex-direction: row; gap: 16px 32px">
+      <svg class="arr arr-prev" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg><div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Previous project</div><div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Accessible Periodic Table</div></div>
     </a>
+    <a class="card tile" href="project-eeg-visualizer.html" style="flex: 1 1 380px; padding: 36px 40px; align-items: center; justify-content: space-between; flex-direction: row; gap: 16px 32px">
+      <div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project</div><div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Custom EEG Visualizer</div></div><svg class="arr" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </a>
+    </div>
   </section>
 
   <footer style="border-top: 1px solid #232830">

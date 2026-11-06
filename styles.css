@@ -16,6 +16,7 @@ a:focus-visible{outline:2px solid var(--accent,#A5B4FC);outline-offset:3px;borde
 .tile{display:flex;flex-direction:column;text-decoration:none;color:inherit}
 .arr{transition:transform .25s}
 .tile:hover .arr{transform:translate(5px,-5px)}
+.tile:hover .arr-prev{transform:translate(-5px,0)}
 .ph{background:repeating-linear-gradient(135deg,#D3D8DE 0 12px,#C9CED5 12px 24px);color:#3F4751;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box}
 .polaroid{background:#ECEEF1;border-radius:6px;box-shadow:0 22px 44px rgba(0,0,0,.5);transition:rotate .35s,scale .35s}
 .polaroid:hover{rotate:0deg !important;scale:1.03}

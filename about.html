@@ -47,6 +47,12 @@
 .ppanel.open{grid-template-rows:1fr;opacity:1;visibility:visible;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1),opacity .35s ease .08s,visibility 0s}
 .ppanel>.pclip{min-height:0;overflow:hidden}
 .ppanel .pbox{margin-top:20px;padding:clamp(22px,3vw,36px);border:1px solid var(--accent);border-radius:18px;background:#12151A}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.pill{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;letter-spacing:0.06em;color:#ECEEF1;background:transparent;border:1px solid #3A414B;border-radius:999px;padding:9px 16px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.pill:hover,.pill:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.pill[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#0B0D10}
+.ctrack.pfood>figure[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.pill{transition:none}}
 .pdetail{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:28px 40px;align-items:start}
 .pgal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px}
 @media (prefers-reduced-motion:reduce){.place,.place .pchev,.ppanel,.ppanel.open{transition:none}}
@@ -69,18 +75,15 @@
   <section class="dots" style="border-bottom: 1px solid #232830">
     <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(32px, 5vw, 72px) clamp(20px, 5vw, 80px) clamp(56px, 7vw, 96px); display: flex; flex-wrap: wrap; gap: 56px 80px; align-items: flex-start">
 
-      <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; padding-top: 8px">
+      <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: flex-start; padding-top: 8px">
         <figure class="rise" style="margin: 0; width: 240px; background: #ECEEF1; border-radius: 8px; padding: 12px 12px 14px; box-shadow: 0 18px 40px rgba(0,0,0,.45)">
-          <div class="ph" style="height: 280px; border-radius: 4px">Photo 1</div>
-          <figcaption style="font-size: 14px; color: #3A424C; margin-top: 12px; text-align: center">[caption]</figcaption>
+          <img src="images/travel/Philadelphia/Skyline/Skyline3_web.jpg" alt="The Philadelphia skyline from the Parkway" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 4px">
         </figure>
         <figure class="rise2" style="margin: 40px 0 0; width: 240px; background: #ECEEF1; border-radius: 8px; padding: 12px 12px 14px; box-shadow: 0 18px 40px rgba(0,0,0,.45)">
-          <div class="ph" style="height: 280px; border-radius: 4px">Photo 2</div>
-          <figcaption style="font-size: 14px; color: #3A424C; margin-top: 12px; text-align: center">[caption]</figcaption>
+          <img src="images/cooking/grilledchicken_web.jpg" alt="Chicken on the grill" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 4px">
         </figure>
         <figure class="rise2" style="margin: 0; width: 240px; background: #ECEEF1; border-radius: 8px; padding: 12px 12px 14px; box-shadow: 0 18px 40px rgba(0,0,0,.45)">
-          <div class="ph" style="height: 280px; border-radius: 4px">Photo 3</div>
-          <figcaption style="font-size: 14px; color: #3A424C; margin-top: 12px; text-align: center">[caption]</figcaption>
+          <img src="images/restaurants/Forsythia/ForsythiaLamb_web.jpg" alt="Rack of lamb at Forsythia" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 4px">
         </figure>
       </div>
 
@@ -89,9 +92,9 @@
           <span style="width: 40px; height: 1px; background: var(--accent)"></span>
           About
         </div>
-        <h1 class="rise" style="margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 6.4vw, 96px); line-height: 0.98; letter-spacing: -0.045em">[A HEADLINE ABOUT YOU,<br><span style="color: var(--accent)">SECOND LINE.]</span></h1>
+        <h1 class="rise" style="margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 6.4vw, 96px); line-height: 0.98; letter-spacing: -0.045em">Building software,<br><span style="color: var(--accent)">chasing experiences.</span></h1>
         <p style="margin: 0; font-size: 20px; line-height: 1.6; color: #ECEEF1; text-wrap: pretty">Hi, I'm Peter. I'm a senior computer science student at NC State University graduating in December 2026. I started out in Java, Spring Boot and Hibernate, then moved into TypeScript and React, and since August 2025 I've been part of Neurotech at NC State, where I now lead the software team and work with EEG data. If you want to see what I've built, head over to my <a class="inlink" href="work.html">work page</a>.</p>
-        <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">Outside of code, I’m happiest when I’m traveling, cooking, or hunting down something new to eat. Music is a big part of my life too: my playlists run from pop all the way to metal, and I play piano. I also like staying active, and the gym is a regular part of my week. Looking ahead, I’d love to visit as many national parks as I can and, eventually, train for and finish an Ironman.</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">Outside of code, I’m happiest when I’m traveling, cooking, or eating good food. I enjoy listening to all types of music from pop to metal, and I play piano. I also like staying active, and the gym is a regular part of my week. Looking ahead, I’d love to visit as many national parks as I can and, eventually, train for and finish an Ironman.</p>
       </div>
 
     </div>
@@ -99,7 +102,7 @@
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0;">
     <h2 style="margin: 0 0 12px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(36px, 4.5vw, 64px); line-height: 1; letter-spacing: -0.04em">Travel</h2>
-    <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SENTENCE ABOUT HOW YOU TRAVEL: planned to the minute, or wing it and see what happens.]</p>
+    <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">I love to explore new places, both checking out the tourist attractions and trying to experience them like someone living there. I always try to plan attractions in advance and wing it the rest of the time to see as much as possible.</p>
     <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
@@ -111,13 +114,18 @@
           <span class="psoon"><span>Coming Dec 2026</span></span>
           <span class="pname"><span>London</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
-      <button type="button" class="place" aria-expanded="false" aria-controls="pn-1-2">
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-1-4" disabled aria-label="Elche, coming December 2026">
           <span class="ph pimg">Cover photo</span>
+          <span class="psoon"><span>Coming Dec 2026</span></span>
+          <span class="pname"><span>Elche</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+      </button>
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-1-2">
+          <img class="pimg" src="images/travel/Philadelphia/Skyline/Skyline2_web.jpg" alt="" loading="lazy" decoding="async">
           <span class="pname"><span>Philadelphia</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
       <button type="button" class="place" aria-expanded="false" aria-controls="pn-1-1">
-          <span class="ph pimg">Cover photo</span>
-          <span class="pname"><span>Montreal</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+          <img class="pimg" src="images/travel/Montreal/Skyline/SkylineNightSign_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Montréal</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
     </div>
     </div>
@@ -161,11 +169,11 @@
           </div>
         </div></div>
       </div>
-      <div class="ppanel" id="pn-1-2" role="region" aria-label="Philadelphia">
+      <div class="ppanel" id="pn-1-4" role="region" aria-label="Elche">
         <div class="pclip"><div class="pbox">
-          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Philadelphia</h3>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Philadelphia, Pennsylvania · October 2026</div>
-          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: one or two sentences on the trip and what stood out.]</p>
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Elche</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Elche, Spain · Upcoming, December 2026</div>
+          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: where you’re going, and what you’re looking forward to.]</p>
           <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
@@ -200,40 +208,459 @@
           </div>
         </div></div>
       </div>
-      <div class="ppanel" id="pn-1-1" role="region" aria-label="Montreal">
+      <div class="ppanel" id="pn-1-2" role="region" aria-label="Philadelphia">
         <div class="pclip"><div class="pbox">
-          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Montreal</h3>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Montreal, Canada · July 2025</div>
-          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: one or two sentences on the trip and what stood out.]</p>
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Philadelphia</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Philadelphia, Pennsylvania · October 2026</div>
+          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">I've been considering moving to Philly and this was my first visit to check it out! I loved seeing all the history and exploring the different areas of the city. </p>
+          <div class="pills" role="group" aria-label="Filter Philadelphia photos by place">
+            <button type="button" class="pill" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="pill" data-filter="readingterminal" aria-pressed="false">Reading Terminal Market</button>
+            <button type="button" class="pill" data-filter="easternstate" aria-pressed="false">Eastern State Penitentiary</button>
+            <button type="button" class="pill" data-filter="independencehall" aria-pressed="false">Independence Hall</button>
+            <button type="button" class="pill" data-filter="cityhall" aria-pressed="false">City Hall</button>
+            <button type="button" class="pill" data-filter="chinatown" aria-pressed="false">Chinatown</button>
+            <button type="button" class="pill" data-filter="food" aria-pressed="false">Eats</button>
+            <button type="button" class="pill" data-filter="skyline" aria-pressed="false">Skyline</button>
+            <button type="button" class="pill" data-filter="streets" aria-pressed="false">Around town</button>
+          </div>
           <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
 <button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
 </div>
 <div class="ctrack pfood">
-            <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a view</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+            <figure data-summary data-place="readingterminal" style="margin: 0">
+              <img src="images/travel/Philadelphia/ReadingTerminal/Reading1_web.jpg" alt="Reading Terminal Market" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Inside Reading Terminal Market</figcaption>
             </figure>
-            <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a place you went</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+            <figure data-place="readingterminal" style="margin: 0">
+              <img src="images/travel/Philadelphia/ReadingTerminal/Reading2_web.jpg" alt="Browsing the stalls" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Inside Reading Terminal Market</figcaption>
             </figure>
-            <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: food</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+            <figure data-place="readingterminal" style="margin: 0">
+              <img src="images/travel/Philadelphia/ReadingTerminal/Reading3_web.jpg" alt="Inside the market" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Inside Reading Terminal Market</figcaption>
             </figure>
-            <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a street or landmark</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+            <figure data-place="readingterminal food" style="margin: 0">
+              <img src="images/travel/Philadelphia/ReadingTerminal/Pretzel_web.jpg" alt="A fresh Miller’s Twist pretzel" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">A pretzel from Miller's Twist</figcaption>
             </figure>
-            <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: you there</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+            <figure data-place="readingterminal food" style="margin: 0">
+              <img src="images/travel/Philadelphia/ReadingTerminal/PorkSandwich_web.jpg" alt="Roast pork from Tommy DiNic’s" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Roast pork sandwich from Tommy DiNic’s</figcaption>
             </figure>
-            <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a favorite moment</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+            <figure data-place="readingterminal food" style="margin: 0">
+              <img src="images/travel/Philadelphia/ReadingTerminal/AppleDumpling_web.jpg" alt="Apple dumpling from Reading Terminal Market" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Apple dumpling</figcaption>
+            </figure>
+            <figure data-summary data-place="easternstate" style="margin: 0">
+              <img src="images/travel/Philadelphia/EasternState/EasternStateTower_web.jpg" alt="Guard tower" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Guard tower at Eastern State</figcaption>
+            </figure>
+            <figure data-place="easternstate" style="margin: 0">
+              <img src="images/travel/Philadelphia/EasternState/EasternStateBlock5_web.jpg" alt="Cell Block 5" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Cell Block 5</figcaption>
+            </figure>
+            <figure data-place="easternstate" style="margin: 0">
+              <img src="images/travel/Philadelphia/EasternState/EasternStateSkyline_web.jpg" alt="The yard, with the skyline behind" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The yard, with the skyline behind</figcaption>
+            </figure>
+            <figure data-place="easternstate" style="margin: 0">
+              <img src="images/travel/Philadelphia/EasternState/EasternStateLetter_web.jpg" alt="A letter posted on the fence" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">A photo request from a prisoner in solitary</figcaption>
+            </figure>
+            <figure data-place="independencehall" style="margin: 0">
+              <img src="images/travel/Philadelphia/IndependenceHall/IndependenceHallCongress_web.jpg" alt="The Assembly Room" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Meeting room of the Continental Congress</figcaption>
+            </figure>
+            <figure data-summary data-place="independencehall" style="margin: 0">
+              <img src="images/travel/Philadelphia/IndependenceHall/IndependenceHallFlowers_web.jpg" alt="Independence Hall and the fall flowers" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Independence Hall and the fall flowers</figcaption>
+            </figure>
+            <figure data-summary data-place="independencehall" style="margin: 0">
+              <img src="images/travel/Philadelphia/IndependenceHall/LibertyBell_web.jpg" alt="The Liberty Bell" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The Liberty Bell</figcaption>
+            </figure>
+            <figure data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/CityHall_web.jpg" alt="City Hall" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">City Hall</figcaption>
+            </figure>
+            <figure data-summary data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/CityHall2_web.jpg" alt="City Hall tower" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">City Hall tower</figcaption>
+            </figure>
+            <figure data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/CityHall3_web.jpg" alt="City Hall from the LOVE statue" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">City Hall from the LOVE statue</figcaption>
+            </figure>
+            <figure data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/CityHall4_web.jpg" alt="City Hall courtyard fountains" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">City Hall courtyard fountains</figcaption>
+            </figure>
+            <figure data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/CityHall5_web.jpg" alt="Down Broad Street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Down Broad Street</figcaption>
+            </figure>
+            <figure data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/FountainCityHall_web.jpg" alt="Swann Memorial Fountain" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Swann Memorial Fountain</figcaption>
+            </figure>
+            <figure data-place="cityhall" style="margin: 0">
+              <img src="images/travel/Philadelphia/CityHall/StatueHorse_web.jpg" alt="Equestrian statue" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Equestrian statue</figcaption>
+            </figure>
+            <figure data-summary data-place="chinatown" style="margin: 0">
+              <img src="images/travel/Philadelphia/Chinatown/ChinatownGate_web.jpg" alt="Chinatown Friendship Gate" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Chinatown Friendship Gate</figcaption>
+            </figure>
+            <figure data-place="chinatown" style="margin: 0">
+              <img src="images/travel/Philadelphia/Chinatown/ChinatownStreet_web.jpg" alt="Chinatown at night" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Chinatown at night</figcaption>
+            </figure>
+            <figure data-place="chinatown" style="margin: 0">
+              <img src="images/travel/Philadelphia/Chinatown/Chinatown2_web.jpg" alt="Chinatown street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Chinatown street</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/travel/Philadelphia/Food/LobsterTail_web.jpg" alt="Lobster tail pastry" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Lobster tail pastry</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Misc/DimSum_web.jpg" alt="Xiao long bao, shu mai and beef ho fun at Dim Sum Garden" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Xiao long bao, shu mai, scallion pancake and beef ho fun at Dim Sum Garden</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Misc/DimSumCrabRangoon_web.jpg" alt="Crab rangoon at Dim Sum Garden" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Crab rangoons and a bubble tea at Dim Sum Garden</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Misc/DimSumGarlicPork_web.jpg" alt="Pork in garlic sauce at Dim Sum Garden" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pork in garlic sauce at Dim Sum Garden</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Forsythia/ForsythiaLamb_web.jpg" alt="Rack of lamb at Forsythia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Lamb at Forsythia</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Misc/SabrinasHuevos_web.jpg" alt="Huevos rancheros at Sabrina’s" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Huevos rancheros at Sabrina’s</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Misc/Cheesesteak_web.jpg" alt="Cheesesteak from Del Rossi’s Pizza Co." loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Cheesesteak from Del Rossi’s Pizza Co.</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Misc/Pizza_web.jpg" alt="Pizza from Del Rossi’s Pizza Co." loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pizza from Del Rossi’s Pizza Co.</figcaption>
+            </figure>
+            <figure data-place="food" style="margin: 0">
+              <img src="images/restaurants/Famous4thStreetDeli/4thSandwich_web.jpg" alt="Pastrami on rye at Famous 4th Street Deli" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pastrami sandwich from Famous 4th Street Deli</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Philadelphia/Skyline/Skyline_web.jpg" alt="Skyline from the road" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Skyline from I95</figcaption>
+            </figure>
+            <figure data-summary data-place="skyline" style="margin: 0">
+              <img src="images/travel/Philadelphia/Skyline/Skyline2_web.jpg" alt="Skyline from the Parkway" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Skyline from the art museum</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Philadelphia/Skyline/Skyline3_web.jpg" alt="Down the Parkway" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Skyline from down Benjamin Franklin Parkway</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Philadelphia/Skyline/SkylineClouds_web.jpg" alt="Skyline through the haze" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Skyline from I95 on a cloudy day</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Philadelphia/Skyline/SkylineMe_web.jpg" alt="Me and the skyline" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Me and the skyline</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Philadelphia/Skyline/SkylineNight_web.jpg" alt="Skyline at night" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Skyline at night from street level</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/ArtMuseum_web.jpg" alt="Philadelphia Museum of Art" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Philadelphia Museum of Art</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Elfreth1_web.jpg" alt="Elfreth’s Alley" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Elfreth’s Alley</figcaption>
+            </figure>
+            <figure data-summary data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Elfreth2_web.jpg" alt="Elfreth’s Alley" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Elfreth’s Alley</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/RittenhouseSquare_web.jpg" alt="Rittenhouse Square" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Rittenhouse Square</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/HardRockCafe_web.jpg" alt="Hard Rock Cafe" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Hard Rock Cafe</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/PersonMural_web.jpg" alt="Mural on Market Street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Mural on Market Street</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/TrainMural_web.jpg" alt="Train mural" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Train mural</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Train_web.jpg" alt="PATCO Speedline on the Benjamin Franklin Bridge" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">PATCO Speedline on the Benjamin Franklin Bridge</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Building_web.jpg" alt="Old City building" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Building in Old City</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Building2_web.jpg" alt="A grand old building" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Building near Independence Hall</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/BuildingsGarden_web.jpg" alt="Rooftop garden" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Garden and skyline from JFK Plaza/LOVE Park</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street_web.jpg" alt="Street view" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street2_web.jpg" alt="Street view" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street3_web.jpg" alt="Street corner" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street4_web.jpg" alt="Street at dusk" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street5_web.jpg" alt="Downtown crossing" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street6_web.jpg" alt="Old City street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/Street7_web.jpg" alt="Rowhouses" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Philadelphia/Streets/ForsythiaOutside_web.jpg" alt="Forsythia, from the street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Forsythia, from the street</figcaption>
+            </figure>
+          </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ppanel" id="pn-1-1" role="region" aria-label="Montréal">
+        <div class="pclip"><div class="pbox">
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Montréal</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Montréal, Canada · July 2025</div>
+          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">This was my first trip internationally. It inspired my love for cities and fine dining. I hope to return soon!</p>
+          <div class="pills" role="group" aria-label="Filter Montréal photos by place">
+            <button type="button" class="pill" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="pill" data-filter="notredame" aria-pressed="false">Notre-Dame Basilica</button>
+            <button type="button" class="pill" data-filter="stmary" aria-pressed="false">Mary Queen of the World Cathedral</button>
+            <button type="button" class="pill" data-filter="oratory" aria-pressed="false">St. Joseph’s Oratory</button>
+            <button type="button" class="pill" data-filter="murals" aria-pressed="false">Murals</button>
+            <button type="button" class="pill" data-filter="skyline" aria-pressed="false">Skyline & river</button>
+            <button type="button" class="pill" data-filter="streets" aria-pressed="false">Around town</button>
+          </div>
+          <div class="carousel">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame1_web.jpg" alt="The nave" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame2_web.jpg" alt="Side chapel" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame3_web.jpg" alt="The sanctuary" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame4_web.jpg" alt="The vaulted ceiling" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The vaulted ceiling</figcaption>
+            </figure>
+            <figure data-summary data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame5_web.jpg" alt="The altar" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The altar</figcaption>
+            </figure>
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame6_web.jpg" alt="Stained glass" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Stained glass</figcaption>
+            </figure>
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame7_web.jpg" alt="Looking down the nave" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDame8_web.jpg" alt="The altar, up close" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The altar, up close</figcaption>
+            </figure>
+            <figure data-summary data-place="notredame" style="margin: 0">
+              <img src="images/travel/Montreal/NotreDame/NotreDameOutsideNight_web.jpg" alt="Notre-Dame at night" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Notre-Dame at night</figcaption>
+            </figure>
+            <figure data-place="stmary" style="margin: 0">
+              <img src="images/travel/Montreal/StMary/SaintMary1_web.jpg" alt="The baldachin" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The baldachin</figcaption>
+            </figure>
+            <figure data-place="stmary" style="margin: 0">
+              <img src="images/travel/Montreal/StMary/SaintMary2_web.jpg" alt="Inside the cathedral" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-summary data-place="stmary" style="margin: 0">
+              <img src="images/travel/Montreal/StMary/SaintMary4_web.jpg" alt="Looking up at the dome" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Domed ceiling</figcaption>
+            </figure>
+            <figure data-summary data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/OratoryOutside_web.jpg" alt="The Oratory and its dome" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The Oratory</figcaption>
+            </figure>
+            <figure data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/OratoryOutside2_web.jpg" alt="The approach" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/Oratory1_web.jpg" alt="The altar" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/Oratory2_web.jpg" alt="The nave" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/Oratory3_web.jpg" alt="The sanctuary" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/OratoryStatue_web.jpg" alt="Angels Unawares sculpture" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Angels Unawares sculpture</figcaption>
+            </figure>
+            <figure data-place="oratory" style="margin: 0">
+              <img src="images/travel/Montreal/Oratory/OratoryView_web.jpg" alt="The view from the steps" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The view from the steps</figcaption>
+            </figure>
+            <figure data-summary data-place="murals" style="margin: 0">
+              <img src="images/travel/Montreal/Murals/ManMural_web.jpg" alt="Leonard Cohen mural" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Leonard Cohen mural</figcaption>
+            </figure>
+            <figure data-place="murals" style="margin: 0">
+              <img src="images/travel/Montreal/Murals/GrannyMural_web.jpg" alt="Street mural" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Street mural</figcaption>
+            </figure>
+            <figure data-place="murals" style="margin: 0">
+              <img src="images/travel/Montreal/Murals/GardenMural_web.jpg" alt="Garden and mural" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Garden and mural</figcaption>
+            </figure>
+            <figure data-summary data-place="skyline" style="margin: 0">
+              <img src="images/travel/Montreal/Skyline/SkylineNightSign_web.jpg" alt="Bonjour Montréal at night" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Bonjour Montréal sign and skyline at night</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Montreal/Skyline/Bridge_web.jpg" alt="The bridge at night" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The bridge at night</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Montreal/Skyline/FerrisWheel_web.jpg" alt="The Ferris wheel at night" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The Ferris wheel at night</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Montreal/Skyline/FerrisWheelRiver_web.jpg" alt="The Ferris wheel on the Old Port" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The Ferris wheel on the Old Port</figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Montreal/Skyline/SkyscraperRow_web.jpg" alt="Downtown towers" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="skyline" style="margin: 0">
+              <img src="images/travel/Montreal/Skyline/SkyscraperRow2_web.jpg" alt="Downtown towers" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-summary data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/OldTown1_web.jpg" alt="Old Montréal flower arch" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Old city flower arch</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/OldTown2_web.jpg" alt="Old Montréal street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Old city street</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Street_web.jpg" alt="Old Montréal alley" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Old city alley</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Rowhomes_web.jpg" alt="Rowhouses" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Rowhomes</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Rowhomes2_web.jpg" alt="Rowhouses and a bike" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Rowhomes</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/House_web.jpg" alt="Colourful stairs" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Colourful stairs</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Building1_web.jpg" alt="City Hall" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Building_web.jpg" alt="Church tower" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Building2_web.jpg" alt="Building and fountain" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Building22_web.jpg" alt="Building and fountain" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/FireHouse_web.jpg" alt="Fire station" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Fire station</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/ComplexDejardines_web.jpg" alt="Complexe Desjardins" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Complexe Desjardins</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/CircleThing_web.jpg" alt="Downtown plaza" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/BerlinWallPiece_web.jpg" alt="A piece of the Berlin Wall" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">A piece of the Berlin Wall</figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/BerlinWallPiece2_web.jpg" alt="A piece of the Berlin Wall" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Garden_web.jpg" alt="Community garden" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure data-place="streets" style="margin: 0">
+              <img src="images/travel/Montreal/Streets/Garden2_web.jpg" alt="Community garden" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
             </figure>
           </div>
           </div>
@@ -242,21 +669,17 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Favorite trip</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[A TRIP YOU STILL TALK ABOUT]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Montréal has been my favorite so far. It was my first international trip and I plan on going back soon!</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Most surprising place</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[SOMEWHERE THAT EXCEEDED EXPECTATIONS]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Montréal was most surprising because it was my first time in a larger city, and being able to walk/take the train everywhere was a big change.</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">On the list</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[A PLACE YOU WANT TO GO NEXT]</div>
-      </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Never travel without</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[ONE ITEM YOU ALWAYS PACK]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">I hope to be able to travel a lot. Scotland, Paris, and Southeast Asia are what I'm aiming for next.</div>
       </div>
 
     </div>
@@ -264,38 +687,60 @@
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0;">
     <h2 style="margin: 0 0 12px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(36px, 4.5vw, 64px); line-height: 1; letter-spacing: -0.04em">In the kitchen</h2>
-    <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SENTENCE ABOUT YOUR COOKING: where you learned, and what you reach for when you want to impress someone.]</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px; margin-bottom: 20px">
-      <figure style="margin: 0">
-        <div class="ph" style="height: 260px; border-radius: 14px">Photo: a dish you made</div>
-        <figcaption style="font-size: 14px; color: #9BA4AF; margin-top: 10px">[caption]</figcaption>
-      </figure>
-      <figure style="margin: 0">
-        <div class="ph" style="height: 260px; border-radius: 14px">Photo: cooking in action</div>
-        <figcaption style="font-size: 14px; color: #9BA4AF; margin-top: 10px">[caption]</figcaption>
-      </figure>
-      <figure style="margin: 0">
-        <div class="ph" style="height: 260px; border-radius: 14px">Photo: a meal with people</div>
-        <figcaption style="font-size: 14px; color: #9BA4AF; margin-top: 10px">[caption]</figcaption>
-      </figure>
+    <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">I love eating, so to compliment that I started cooking. I find recipes online or learn from YouTube videos, but recently I've been experimenting more on my own.</p>
+    <div class="carousel" style="margin-bottom: 20px">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure style="margin: 0">
+              <img src="images/cooking/steak_web.jpg" alt="Steak and fries" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Steak with chimichurri and fries.</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/butterchicken_web.jpg" alt="Butter chicken" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Butter chicken</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/naan_web.jpg" alt="Naan" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Naan</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/salmon_web.jpg" alt="Salmon with potatoes" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Salmon over beurre blanc with potatoes</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/grilledchicken_web.jpg" alt="Grilled chicken" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Grilled chicken</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/chickenpasta_web.jpg" alt="Chicken pasta" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Simple pasta with chicken</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/hoisinnoodles_web.jpg" alt="Hoisin noodles" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Hoisin garlic noodles</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/macandcheese_web.jpg" alt="Mac and cheese" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Mac and cheese</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/cooking/stuffing_web.jpg" alt="Stuffing" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Stuffing</figcaption>
+            </figure>
+</div>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Signature dish</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[THE THING YOU MAKE BEST]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Butter chicken, according to my girlfriend</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Learned from</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[A FAMILY MEMBER, A VIDEO, A DISASTER]</div>
-      </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Current obsession</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[A RECIPE OR TECHNIQUE YOU'RE WORKING ON]</div>
-      </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Kitchen hill to die on</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[YOUR STRONGEST COOKING OPINION]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Pizza! I recently got a pizza steel and I've used it a few times, but I still haven't perfected the process..</div>
       </div>
 
     </div>
@@ -303,37 +748,56 @@
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0;">
     <h2 style="margin: 0 0 12px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(36px, 4.5vw, 64px); line-height: 1; letter-spacing: -0.04em">Eating &amp; drinking</h2>
-    <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SENTENCE ABOUT YOUR TASTES: adventurous, comfort-food loyal, or both.]</p>
+    <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">I love food and enjoy trying all different types. I like experiencing food, which has led me to more fine dining recently, but I still enjoy the casual spots.</p>
             <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
 <button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
 </div>
-    <div class="ctrack places">
+    <div class="ctrack places" data-shuffle>
       <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-1">
-          <span class="ph pimg">Cover photo</span>
-          <span class="pname"><span>[RESTAURANT 1]</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+          <img class="pimg" src="images/restaurants/Forsythia/ForsythiaOutside_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Forsythia</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
       <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-2">
-          <span class="ph pimg">Cover photo</span>
-          <span class="pname"><span>[RESTAURANT 2]</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+          <img class="pimg" src="images/restaurants/Famous4thStreetDeli/4thDeliStreet_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Famous 4th Street Deli</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
       <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-3">
-          <span class="ph pimg">Cover photo</span>
-          <span class="pname"><span>[RESTAURANT 3]</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+          <img class="pimg" src="images/restaurants/JoeBeef/JoeBeefLobsterPasta_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Joe Beef</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
       <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-4">
-          <span class="ph pimg">Cover photo</span>
-          <span class="pname"><span>[RESTAURANT 4]</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+          <img class="pimg" src="images/restaurants/HenriBrasserie/HenriBrasserieSteak_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Henri Brasserie Française</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+      </button>
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-5">
+          <img class="pimg" src="images/restaurants/Barocco/BaroccoLamb_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Barroco</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+      </button>
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-9">
+          <img class="pimg" src="images/restaurants/PrimeBBQ/cover_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Prime Barbecue</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+      </button>
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-8">
+          <img class="pimg" src="images/restaurants/TamashaModernIndian/cover_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Tamasha Modern Indian</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+      </button>
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-7">
+          <img class="pimg" src="images/restaurants/Herons/cover_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Herons</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+      </button>
+      <button type="button" class="place" aria-expanded="false" aria-controls="pn-2-6" data-last>
+          <img class="pimg" src="images/restaurants/Misc/SchwartzSmokedMeat_web.jpg" alt="" loading="lazy" decoding="async">
+          <span class="pname"><span>Misc</span><svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
       </button>
     </div>
     </div>
     <div class="ppanels">
-      <div class="ppanel" id="pn-2-1" role="region" aria-label="[RESTAURANT 1]">
+      <div class="ppanel" id="pn-2-1" role="region" aria-label="Forsythia">
         <div class="pclip"><div class="pbox">
-          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">[RESTAURANT 1]</h3>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">[CITY OR NEIGHBORHOOD] · [CUISINE]</div>
-          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: one or two sentences on the place and why you love it.]</p>
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Forsythia</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Old City, Philadelphia · French</div>
           <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
@@ -341,38 +805,49 @@
 </div>
 <div class="ctrack pfood">
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Forsythia/ForsythiaOutside_web.jpg" alt="Forsythia, from the street" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Forsythia, from the street</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Forsythia/ForsythiaBread_web.jpg" alt="Cake and bread course" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Bread with cranberry butter</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Forsythia/ForsythiaCremBrulee_web.jpg" alt="Crème brûlée" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Strawberry crème brûlée</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a drink or dessert</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Forsythia/ForsythiaDiplomat_web.jpg" alt="Diplomat cake" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Mille Feuille, fruit flavored diplomat cream between cripsy vanilla wafers</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Forsythia/ForsythiaEscargot_web.jpg" alt="Escargot" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Escargot in pork-honey jus</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the table</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Forsythia/ForsythiaLamb_web.jpg" alt="Rack of lamb" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Lamb chops over mashed potatoes and jus</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Forsythia/ForsythiaMadoline_web.jpg" alt="Madeleines" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Madeleines</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Forsythia/ForsythiaSteak_web.jpg" alt="Steak" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Steak and potatoes</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Forsythia/ForsythiaTartare_web.jpg" alt="Tartare" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Beef tartare with a fondue and blackberry</figcaption>
             </figure>
           </div>
           </div>
         </div></div>
       </div>
-      <div class="ppanel" id="pn-2-2" role="region" aria-label="[RESTAURANT 2]">
+      <div class="ppanel" id="pn-2-2" role="region" aria-label="Famous 4th Street Deli">
         <div class="pclip"><div class="pbox">
-          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">[RESTAURANT 2]</h3>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">[CITY OR NEIGHBORHOOD] · [CUISINE]</div>
-          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: one or two sentences on the place and why you love it.]</p>
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Famous 4th Street Deli</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Philadelphia · Deli</div>
           <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
@@ -380,38 +855,41 @@
 </div>
 <div class="ctrack pfood">
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Famous4thStreetDeli/4thDeliStreet_web.jpg" alt="The street outside" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The street outside</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Famous4thStreetDeli/4thSandwich_web.jpg" alt="Pastrami on rye" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pastrami on rye</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Famous4thStreetDeli/4thDeliSandwich_web.jpg" alt="The sandwich" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The sandwich</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a drink or dessert</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Famous4thStreetDeli/4thDeliSides_web.jpg" alt="Hot sides" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Sides</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Famous4thStreetDeli/4thDeliFish_web.jpg" alt="The fish counter" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The fish counter</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the table</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/Famous4thStreetDeli/4thDeliCakes_web.jpg" alt="The cake case" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The cake case</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Famous4thStreetDeli/4thDeliCookies_web.jpg" alt="Cookies" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Cookies</figcaption>
             </figure>
           </div>
           </div>
         </div></div>
       </div>
-      <div class="ppanel" id="pn-2-3" role="region" aria-label="[RESTAURANT 3]">
+      <div class="ppanel" id="pn-2-3" role="region" aria-label="Joe Beef">
         <div class="pclip"><div class="pbox">
-          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">[RESTAURANT 3]</h3>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">[CITY OR NEIGHBORHOOD] · [CUISINE]</div>
-          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: one or two sentences on the place and why you love it.]</p>
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Joe Beef</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Montréal · French</div>
           <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
@@ -419,38 +897,37 @@
 </div>
 <div class="ctrack pfood">
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/JoeBeef/JoeBeefLobsterPasta_web.jpg" alt="Lobster pasta at Joe Beef" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Signature lobster spaghetti</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/JoeBeef/JoeBeefSteak_web.jpg" alt="Steak at Joe Beef" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Steak and potatoes</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/JoeBeef/JoeBeefEscargot_web.jpg" alt="Escargot at Joe Beef" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Escargot</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a drink or dessert</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/JoeBeef/JoeBeefMousse_web.jpg" alt="Chocolate mousse at Joe Beef" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Chocolate mousse</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/JoeBeef/JoeBeefDessert_web.jpg" alt="Dessert at Joe Beef" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the table</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/JoeBeef/JoeBeefDessert2_web.jpg" alt="Dessert at Joe Beef" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
             </figure>
           </div>
           </div>
         </div></div>
       </div>
-      <div class="ppanel" id="pn-2-4" role="region" aria-label="[RESTAURANT 4]">
+      <div class="ppanel" id="pn-2-4" role="region" aria-label="Henri Brasserie Française">
         <div class="pclip"><div class="pbox">
-          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">[RESTAURANT 4]</h3>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">[CITY OR NEIGHBORHOOD] · [CUISINE]</div>
-          <p style="margin: 14px 0 28px; max-width: 720px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SHORT SUMMARY: one or two sentences on the place and why you love it.]</p>
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Henri Brasserie Française</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Montréal · French</div>
           <div class="carousel">
 <div class="cnav" hidden>
 <button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
@@ -458,28 +935,306 @@
 </div>
 <div class="ctrack pfood">
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/HenriBrasserie/HenriBrasserieSteak_web.jpg" alt="Steak at Henri Brasserie Française" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Filet with potatoes and vegetables</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a dish</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/HenriBrasserie/HenriBrasserieDish_web.jpg" alt="Dinner at Henri Brasserie Française" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/HenriBrasserie/HenriBrasserieEscargot_web.jpg" alt="Escargot at Henri Brasserie Française" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Escargot</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: a drink or dessert</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/HenriBrasserie/HenriBrasseriePavlova_web.jpg" alt="Pavlova at Henri Brasserie Française" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pavlova</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the interior</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/HenriBrasserie/HenriBrasserieLatteCremeBrulee_web.jpg" alt="Latte and crème brûlée at Henri Brasserie Française" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Latte and crème brûlée</figcaption>
             </figure>
             <figure style="margin: 0">
-              <div class="ph" style="height: 280px; border-radius: 14px">Photo: the table</div>
-              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+              <img src="images/restaurants/HenriBrasserie/HenriBrasserieDrink_web.jpg" alt="A drink at Henri Brasserie Française" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Amaretto cinnamon apple cocktail</figcaption>
+            </figure>
+          </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ppanel" id="pn-2-5" role="region" aria-label="Barroco">
+        <div class="pclip"><div class="pbox">
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Barocco</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Montréal · European</div>
+          <div class="carousel">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure style="margin: 0">
+              <img src="images/restaurants/Barocco/BaroccoLamb_web.jpg" alt="Lamb at Barocco" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Lamb</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Barocco/BaroccoNougat_web.jpg" alt="Nougat at Barocco" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Nougat dessert</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Barocco/BaroccoOliveOilCake_web.jpg" alt="Olive oil cake at Barocco" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Olive oil cake</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Barocco/BaroccoLatte_web.jpg" alt="Latte at Barocco" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Latte</figcaption>
+            </figure>
+          </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ppanel" id="pn-2-8" role="region" aria-label="Tamasha">
+        <div class="pclip"><div class="pbox">
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Tamasha Modern Indian</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">North Hills, Raleigh, NC · Modern Indian</div>
+          <div class="carousel">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/cover_web.jpg" alt="The dining room" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The dining room</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/bao_web.jpg" alt="Bao" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Kerala pork belly bao</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/chilishrimp_web.jpg" alt="Chili shrimp" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Byagdi chilli shrimp</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/butterchicken_web.jpg" alt="Butter chicken" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Butter chicken</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/almondchicken_web.jpg" alt="Almond chicken" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Murg Pasanda, chicken in almond/cashew sauce</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/lentils_web.jpg" alt="Dal" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Dal-E-Tamasha, a slow cooked lentil dip</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/naan_web.jpg" alt="Naan" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Naan</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/dessert1_web.jpg" alt="Dessert" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Lavender Kulfi Falooda</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/dessert2_web.jpg" alt="Dessert" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Mango dessert special</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/TamashaModernIndian/sorbet_web.jpg" alt="Sorbet" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Sorbet</figcaption>
+            </figure>
+          </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ppanel" id="pn-2-9" role="region" aria-label="Prime Barbecue">
+        <div class="pclip"><div class="pbox">
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Prime Barbecue</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Knightdale, NC · Barbecue</div>
+          <div class="carousel">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/cover_web.jpg" alt="The dining room" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The dining room</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/outside_web.jpg" alt="Out back" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px"></figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/line_web.jpg" alt="Waiting in line" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The long line</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/platter_web.jpg" alt="The platter" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Brisket, pork ribs, and pulled pork with dirty rice and mac and cheese</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/platter1_web.jpg" alt="Another platter" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Brisket, pulled pork, and jalepeño cheddar sausace with baked beans and mac and cheese</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/article1_web.jpg" alt="Texas Monthly feature" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Texas Monthly feature</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/article2_web.jpg" alt="Food Network feature" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Food Network feature</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/PrimeBBQ/award_web.jpg" alt="Michelin 2025" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Michelin Bib Gourmand 2025</figcaption>
+            </figure>
+          </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ppanel" id="pn-2-7" role="region" aria-label="Herons">
+        <div class="pclip"><div class="pbox">
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Herons</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px">Cary, NC · Fine dining</div>
+          <div class="carousel">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/cover_web.jpg" alt="The entrance" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The entrance</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/table_web.jpg" alt="The table" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The table</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/amusebouche_web.jpg" alt="Amuse-bouche" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Smoked oysters, tomato tart with goat cheese panna cotta</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/croissant_web.jpg" alt="Croissant" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Croissant with salted butter</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/milkbread_web.jpg" alt="Milk bread" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Milk bread with salt and pepper butter</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/crabsalad_web.jpg" alt="Crab salad" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Crab salad</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/grouper_web.jpg" alt="Grouper" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Grouper</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/lamb_web.jpg" alt="Lamb" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Lamb loin stuffed with lamb sausage, curry sauce</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/squab_web.jpg" alt="Squab" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Squab au jus with foie gras</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/melon_web.jpg" alt="Melon" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Melon sorbet</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/blackberry_web.jpg" alt="Blackberry" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Blackberry sorbet, blackberry ice, blackberry panna cotta</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Herons/petitfours_web.jpg" alt="Petit fours" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Chocolate assortment</figcaption>
+            </figure>
+          </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="ppanel" id="pn-2-6" role="region" aria-label="Misc">
+        <div class="pclip"><div class="pbox">
+          <h3 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -0.03em">Misc</h3>
+          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px"> Other spots </div>
+          <div class="carousel">
+<div class="cnav" hidden>
+<button type="button" class="cbtn" data-dir="-1" aria-label="Scroll left"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="cbtn" data-dir="1" aria-label="Scroll right"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="ctrack pfood">
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/SchwartzSmokedMeat_web.jpg" alt="Smoked meat sandwich — Schwartz’s, Montréal" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Smoked meat sandwich — Schwartz’s, Montréal</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/MandysSalad_web.jpg" alt="Salad — Mandy’s, Montréal" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Salad — Mandy’s, Montréal</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/NobleMocha_web.jpg" alt="Mocha — Noble, Montréal" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Mocha — Noble, Montréal</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/SabrinasOmelette_web.jpg" alt="Omelette — Sabrina’s, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Omelette — Sabrina’s, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/SabrinasHuevos_web.jpg" alt="Huevos rancheros — Sabrina’s, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Huevos rancheros — Sabrina’s, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/MilanoCoffee_web.jpg" alt="Coffee — Milano Coffee, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Mocha — Milano Coffee, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/OldCityCoffee_web.jpg" alt="Iced coffee — Old City Coffee, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Iced Mocha — Old City Coffee, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/Cheesesteak_web.jpg" alt="Cheesesteak — Del Rossi’s Pizza Co., Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Cheesesteak — Del Rossi’s Pizza Co., Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/Pizza_web.jpg" alt="Pizza slices — Del Rossi’s Pizza Co., Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pizza — Del Rossi’s Pizza Co., Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/DimSum_web.jpg" alt="Xiao long bao, shu mai and beef ho fun — Dim Sum Garden, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Xiao long bao, shu mai and beef ho fun — Dim Sum Garden, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/DimSumCrabRangoon_web.jpg" alt="Crab rangoon — Dim Sum Garden, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Crab rangoon — Dim Sum Garden, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/DimSumGarlicPork_web.jpg" alt="Pork in garlic sauce — Dim Sum Garden, Philadelphia" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pork in garlic sauce — Dim Sum Garden, Philadelphia</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/SecondEmpirePaella_web.jpg" alt="Paella — Second Empire" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Paella — Second Empire, Raleigh</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/SecondEmpireDessert_web.jpg" alt="Desserts — Second Empire" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Chocolate soufflé and olive oil cake — Second Empire, Raleigh</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/breakfastBigEds_web.jpg" alt="Breakfast — Big Ed’s" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Breakfast — Big Ed’s, Raleigh</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/breakfastCH_web.jpg" alt="Breakfast — CH" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Breakfast — Carolina Coffee Shop, Chapel Hill</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/pastaGravy_web.jpg" alt="Pasta — Gravy" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Pasta — Gravy, Raleigh</figcaption>
+            </figure>
+            <figure style="margin: 0">
+              <img src="images/restaurants/Misc/sushinine_web.jpg" alt="Sushi boat — Sushi Nine" loading="lazy" decoding="async" style="display: block; width: 100%; height: 280px; object-fit: cover; border-radius: 14px">
+              <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">Sushi boat — Sushi Nine, Chapel Hill</figcaption>
             </figure>
           </div>
           </div>
@@ -488,26 +1243,23 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Favorite meal</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[YOUR FAVORITE FOOD]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Steak and potatoes</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Go-to order</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[WHAT YOU GET AT YOUR FAVORITE RESTAURANT]</div>
-      </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Coffee, tea, or something else</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[YOUR DRINK]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Iced mocha</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Best meal I've ever had</div>
-        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[WHERE, WHEN, AND WHAT]</div>
+        <div style="font-size: 21px; line-height: 1.35; margin-top: auto">Dinner at Herons</div>
       </div>
 
     </div>
   </section>
 
+  <!-- TODO: uncomment and update once there are photos and content for this section
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0; padding-bottom: clamp(72px, 9vw, 128px);">
     <h2 style="margin: 0 0 12px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(36px, 4.5vw, 64px); line-height: 1; letter-spacing: -0.04em">Outside of work</h2>
     <p style="margin: 0 0 36px; max-width: 640px; font-size: 18px; line-height: 1.6; color: #B8C0CA; text-wrap: pretty">[A SENTENCE ABOUT HOW YOU SPEND YOUR TIME WHEN NOBODY'S ASKING YOU FOR ANYTHING.]</p>
@@ -527,33 +1279,37 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Hobbies</div>
         <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[WHAT YOU DO FOR FUN]</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">On repeat</div>
         <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[AN ARTIST, ALBUM, OR PLAYLIST]</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Reading &amp; watching</div>
         <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[A BOOK, SHOW, OR FILM YOU KEEP RECOMMENDING]</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Active side</div>
         <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[SPORTS, GYM, HIKING, OR NONE OF THE ABOVE]</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Fun fact</div>
         <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[SOMETHING PEOPLE WOULDN'T GUESS]</div>
       </div>
-      <div class="card" style="padding: 28px; min-height: 180px; display: flex; flex-direction: column; gap: 12px">
+      <div class="card" style="padding: 24px 28px; display: flex; flex-direction: column; gap: 12px">
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent)">Ask me about</div>
         <div style="font-size: 21px; line-height: 1.35; margin-top: auto">[A TOPIC THAT MAKES YOU LIGHT UP]</div>
       </div>
 
     </div>
   </section>
+  -->
+
+  <!-- spacer so the footer isn't flush with the section above; delete when "Outside of work" is restored -->
+  <div style="height: clamp(72px, 9vw, 128px)"></div>
 
   <footer style="border-top: 1px solid #232830">
     <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 28px clamp(20px, 5vw, 80px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.06em; color: #9BA4AF">
@@ -575,6 +1331,15 @@
 
 </div>
 <script>
+document.querySelectorAll('.ctrack.places[data-shuffle]').forEach(function (track) {
+  var tiles = Array.prototype.slice.call(track.children).filter(function (t) { return !t.hasAttribute('data-last'); });
+  for (var i = tiles.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = tiles[i]; tiles[i] = tiles[j]; tiles[j] = tmp;
+  }
+  var last = track.querySelector('[data-last]');
+  tiles.forEach(function (t) { track.insertBefore(t, last); });
+});
 document.querySelectorAll('.carousel').forEach(function (c) {
   var track = c.querySelector('.ctrack'), nav = c.querySelector('.cnav');
   var prev = nav.querySelector('[data-dir="-1"]'), next = nav.querySelector('[data-dir="1"]');
@@ -607,6 +1372,25 @@ document.querySelectorAll('.places').forEach(function (grid) {
       document.getElementById(btn.getAttribute('aria-controls')).classList.add('open');
     }
   });
+});
+document.querySelectorAll('.pills').forEach(function (pills) {
+  var track = pills.parentNode.querySelector('.ctrack');
+  var figs = track.querySelectorAll('figure');
+  var hasSummary = track.querySelector('figure[data-summary]') !== null;
+  function apply(f) {
+    figs.forEach(function (fig) {
+      fig.hidden = f === 'all' ? (hasSummary && !fig.hasAttribute('data-summary')) : (fig.dataset.place || '').split(' ').indexOf(f) === -1;
+    });
+    track.scrollLeft = 0;
+    track.dispatchEvent(new Event('scroll'));
+  }
+  pills.addEventListener('click', function (e) {
+    var pill = e.target.closest('.pill');
+    if (!pill) return;
+    pills.querySelectorAll('.pill').forEach(function (p) { p.setAttribute('aria-pressed', String(p === pill)); });
+    apply(pill.dataset.filter);
+  });
+  apply('all');
 });
 </script>
 </body>

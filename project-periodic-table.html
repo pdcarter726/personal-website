@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Peter Carter — Interactive Periodic Table</title>
+<title>Peter Carter — Accessible Periodic Table</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500..800&family=Caveat:wght@400..700&family=Geist:wght@400..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
   <section class="dots" style="border-bottom: 1px solid #232830">
     <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(24px, 4vw, 48px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 80px)">
       <a class="back" href="work.html">← All work</a>
-      <h1 class="rise2" style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">An interactive <span style="color: var(--accent)">periodic table.</span></h1>
+      <h1 class="rise2" style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.95; letter-spacing: -0.045em">Accessible <span style="color: var(--accent)">Periodic Table.</span></h1>
       <div class="rise3" style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px">
         <p style="margin: 0; max-width: 600px; font-size: 24px; line-height: 1.4; color: #ECEEF1; text-wrap: balance">A senior design project for CollegeBoard, built so blind and low-vision students can use it too.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
@@ -51,7 +51,7 @@
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(40px, 5vw, 72px) clamp(20px, 5vw, 80px) 0">
     <figure style="margin: 0">
         <img src="images/periodic-table/periodictable.png" alt="The interactive periodic table" style="display: block; width: 100%; height: auto; border: 1px solid #2C333C; border-radius: 16px">
-        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The interactive periodic table, with keyboard help, display settings, element search and a detail view for the selected element.</figcaption>
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The periodic table, with keyboard help, display settings, element search and a detail view for the selected element.</figcaption>
       </figure>
   </section>
 
@@ -59,20 +59,20 @@
 
     <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 40px">
       <div>
-        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">What it is</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">An interactive periodic table, sponsored by CollegeBoard as part of NC State’s Senior Design program. The goal is a table that blind and low-vision students can explore as easily as anyone else in the class.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">The problem</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">The periodic table is organized spatially and an incredibly visual element of chemistry. An element's number of valence electrons matches the ones digit of its group/column number and every element in a period/row has the same number of principle electron shells. Previous implementations of the periodic table designed for blind/low-vision use read the elements as a list, which removes the spatial orientation aspect of each element. Screen readers had trouble reading/pronouncing element symbols. The symbol "Mg" was read as "milligrams" instead of "em gee" for magnesium. They were unable to differentiate between "B" and "Be" for boron and beryllium. This makes it difficult for blind/low-vision students to learn the periodic table and chemistry, creating a barrier for them in STEM fields. </p>
       </div>
       <div>
-        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Why it matters</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">The periodic table is one of the most visual things in a chemistry class: position, color, patterns across rows and columns. Making it explorable without sight means rethinking how that information gets presented, not just slapping labels on it.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">The sponsor</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">College Board is a not-for-profit organization with the goal of standardizing and expanding access to higher education in the United States. They are known for the SAT college entrance exam and AP (Advanced Placement) classes/exams. AP classes give a student the opportunity to earn college credit if they pass the accompanying exam, saving them time and money and allowing them to better prepare for college level classes. In 2026, around 185,000 students took the AP Chemistry exam. Our contact at College Board is Dr. Maggie Linak, the former Deputy Chief Scientist of USAID and the current Executive Directory of Accomodations and Accessibility at College Board. </p>
       </div>
       <div>
-        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">How we’re building it</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">React and Next.js, built by a student team over Fall 2026, from early September to early December. I’m one of the frontend developers; teammates cover the data, the backend and project management.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">What we built</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">Using React and JavaScript we built our own periodic table. We used arrow key movement to preserve spatial orientation of elements in all four directions and implemented a custom narration system using Amazon Polly. When custom dictation is enabled in settings, the entire periodic table becomes ARIA hidden to allow our custom narration to take over. A keyboard help and settings menu are always readable by the screen reader. Additional quality of life features were built in for use parity between blind/low-vision and sighted students. While a sighted student can't get "lost" on the periodic table, a blind student might, so we added a key to jump to Hydrogen. Sighted students can scan the table to look for an element, so we added a search feature to help blind/low-vision students find elements. If a sighted student needs to compare element information, they can look at the element cards themselves, but a blind/low-vision student has to remember and find information again, so we created a bookmark feature for them to save elements next to each other.  </p>
       </div>
       <div>
-        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">Where it stands</h2>
-        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">Planning is done and the build is underway, so this page will grow as the project does.</p>
+        <h2 style="margin: 0 0 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -0.03em">What's next</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #B8C0CA; text-wrap: pretty">A version of the table has been created that is compatible with AP testing standards. We are in the process of receiving user feedback and building out a classroom/learning mode for users to become familiar with the table and learn how to use it. The classroom mode will be built on top of the completed testing mode, adding new information like the eleement names and more that aren't allowed on the AP exam.</p>
       </div>
     </div>
 
@@ -90,10 +90,6 @@
         <div style="font-size: 17px">CollegeBoard</div>
       </div>
       <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 6px">My role</div>
-        <div style="font-size: 17px">Frontend developer</div>
-      </div>
-      <div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #9BA4AF; margin-bottom: 10px">Stack</div>
         <div style="display: flex; flex-wrap: wrap; gap: 8px">
           <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">JavaScript</span><span class="chip">HTML</span>
@@ -106,8 +102,8 @@
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) 0">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 20px">
       <figure style="margin: 0">
-        <div class="ph" style="height: 300px; border-radius: 16px">Image: early sketch or wireframe</div>
-        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">[CAPTION]</figcaption>
+        <img src="images/periodic-table/table-high-contrast.png" alt="The periodic table in high contrast mode" style="display: block; width: 100%; height: 300px; object-fit: contain; background: #fff; border: 1px solid #2C333C; border-radius: 16px">
+        <figcaption style="font-size: 15px; line-height: 1.4; color: #B8C0CA; margin-top: 10px">The high contrast mode of the table.</figcaption>
       </figure>
       <figure style="margin: 0">
         <img src="images/periodic-table/periodictable_team_web.jpg" alt="The periodic table senior design team at dinner" style="display: block; width: 100%; height: 300px; object-fit: cover; object-position: center 35%; border: 1px solid #2C333C; border-radius: 16px">
@@ -117,13 +113,14 @@
   </section>
 
   <section style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 80px) clamp(72px, 9vw, 128px)">
-    <a class="card tile" href="project-car-prices.html" style="padding: 36px 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px">
-      <div>
-        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project</div>
-        <div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Predicting used car prices</div>
-      </div>
-      <svg class="arr" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px">
+    <a class="card tile" href="project-clarify.html" style="flex: 1 1 380px; padding: 36px 40px; align-items: center; justify-content: flex-start; flex-direction: row; gap: 16px 32px">
+      <svg class="arr arr-prev" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg><div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Previous project</div><div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Clarify</div></div>
     </a>
+    <a class="card tile" href="project-car-prices.html" style="flex: 1 1 380px; padding: 36px 40px; align-items: center; justify-content: space-between; flex-direction: row; gap: 16px 32px">
+      <div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Next project</div><div style="margin-top: 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.035em; line-height: 1.05">Used Car Price Prediction Model</div></div><svg class="arr" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </a>
+    </div>
   </section>
 
   <footer style="border-top: 1px solid #232830">
